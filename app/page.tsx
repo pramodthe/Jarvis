@@ -22,8 +22,8 @@ export default function Home() {
       <Hero />
 
       <div className="p-10 md:px-24 lg:px-36 xl:px-48 flex flex-col items-center">
-        <h2 className="font-game text-6xl text-center">Popular Course to Explore</h2>
-        <p className="text-2xl font-game text-center mt-3">Learn Coding with interactive courses, Practical handson with real life example!</p>
+        <h2 className="font-game text-6xl text-center">Popular Subjects to Explore</h2>
+        <p className="text-2xl font-game text-center mt-3">Learn anything with interactive courses, quizzes, and AI-powered help!</p>
         <CourseList maxLimit={6} />
 
         <Link href={'/courses'}>

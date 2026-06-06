@@ -16,9 +16,9 @@ function Hero() {
                     style={{
                         textShadow: "2px 2px 0 #000, -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000",
                     }}
-                >Coding Adventure</h2>
+                >Learning Adventure</h2>
 
-                <h2 className='mt-5 font-game text-3xl'>Beginner friendly coding courses and projects</h2>
+                <h2 className='mt-5 font-game text-3xl'>Interactive, AI-powered courses and lessons for any subject</h2>
 
                 <Link href={'/dashboard'}>
                     <Button className='font-game text-3xl p-6 mt-7' variant={'pixel'}>GET STARTED</Button>
