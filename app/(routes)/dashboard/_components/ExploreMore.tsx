@@ -5,26 +5,26 @@ import React from 'react'
 const ExplorMoreOptions = [
     {
         id: 1,
-        title: 'Quizz Pack',
-        desc: 'Practice what you learned with bite-sized code challenges.',
+        title: 'Quiz Packs',
+        desc: 'Test your knowledge with fun, bite-sized interactive quizzes.',
         icon: '/tree.png'
     },
     {
         id: 2,
-        title: 'Video Courses',
+        title: 'Video Lessons',
         desc: 'Learn with structured video lessons taught step-by-step.',
         icon: '/game.png'
     },
     {
         id: 3,
-        title: 'Community Project',
-        desc: 'Build real-world apps by collaborating with the community.',
+        title: 'Study Groups',
+        desc: 'Collaborate on projects and study groups with the community.',
         icon: '/growth.png'
     },
     {
         id: 4,
-        title: 'Explore Apps',
-        desc: 'Explore prebuild app which you can try demo and build it',
+        title: 'Explore Demos',
+        desc: 'Explore interactive tools, utilities, and demos to learn better.',
         icon: '/start-up.png'
     }
 ];
