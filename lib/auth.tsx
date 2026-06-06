@@ -57,7 +57,7 @@ export function MockAuthProvider({ children }: { children: React.ReactNode }) {
     // Automatically set default guest user if no cookies exist
     if (!email) {
       email = "developer@example.com";
-      name = "CodeBox Developer";
+      name = "AI Learner";
       setCookie("mock_user_email", email);
       setCookie("mock_user_name", name);
     }

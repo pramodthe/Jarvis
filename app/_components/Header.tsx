@@ -98,7 +98,7 @@ function Header() {
 
                     <Image src={'/logo.png'} alt='logo' width={40} height={40} />
 
-                    <h2 className='font-bold text-3xl font-game'>CodeBox</h2>
+                    <h2 className='font-bold text-3xl font-game'>AI Teacher</h2>
                 </div>
             </Link>
             {/* Navbar  */}
