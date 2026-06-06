@@ -7,6 +7,8 @@ import 'react-splitter-layout/lib/index.css';
 import { CompletedExcercises, exercise } from '../../../_components/CourseList';
 import ContentSection from './_components/ContentSection';
 import CodeEditor from './_components/CodeEditor';
+import QuizComponent from './_components/QuizComponent';
+import ArticleCompletion from './_components/ArticleCompletion';
 import { Button } from '@/components/ui/button';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -36,7 +38,8 @@ type ExercisesContent = {
     hint: string,
     hintXp: string,
     starterCode: any,
-    task: string
+    task: string,
+    quiz?: any
 }
 
 function Playground() {
@@ -114,11 +117,27 @@ function Playground() {
                         loading={loading}
                     />
                 </div>
-                {courseExerciseData && <div>
-                    <CodeEditor courseExerciseData={courseExerciseData}
-                        loading={loading}
-                        nextExerciseRoute={nextButtonRoute} />
-                </div>}
+                {courseExerciseData && (
+                    <div>
+                        {courseExerciseData.editorType === 'quiz' ? (
+                            <QuizComponent
+                                courseExerciseData={courseExerciseData}
+                                nextExerciseRoute={nextButtonRoute}
+                            />
+                        ) : courseExerciseData.editorType === 'text' || courseExerciseData.editorType === 'article' ? (
+                            <ArticleCompletion
+                                courseExerciseData={courseExerciseData}
+                                nextExerciseRoute={nextButtonRoute}
+                            />
+                        ) : (
+                            <CodeEditor
+                                courseExerciseData={courseExerciseData}
+                                loading={loading}
+                                nextExerciseRoute={nextButtonRoute}
+                            />
+                        )}
+                    </div>
+                )}
             </SplitterLayout>
             <div className="font-game fixed bottom-0 w-full bg-zinc-900 flex p-4 justify-between items-center">
                 <Link href={'/courses/' + courseId}>
