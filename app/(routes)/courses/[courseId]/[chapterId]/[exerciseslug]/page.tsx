@@ -2,7 +2,8 @@
 import axios from 'axios';
 import { useParams } from 'next/navigation';
 import React, { useEffect, useState } from 'react'
-import SplitterLayout from 'react-splitter-layout';
+import dynamic from 'next/dynamic';
+const SplitterLayout = dynamic(() => import('react-splitter-layout'), { ssr: false });
 import 'react-splitter-layout/lib/index.css';
 import { CompletedExcercises, exercise } from '../../../_components/CourseList';
 import ContentSection from './_components/ContentSection';

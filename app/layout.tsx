@@ -47,7 +47,7 @@ export default function RootLayout({
           <Provider
             attribute="class"
             defaultTheme="dark"
-            enableSystem
+            forcedTheme="dark"
             disableTransitionOnChange
           >
             {children}
